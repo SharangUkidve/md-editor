@@ -1,0 +1,177 @@
+$color-border: var(--color-border);
+$border: 1px solid $color-border;
+$color-primary: var(--color-primary);
+$color-delete: var(--color-delete);
+$color-blockquote: var(--color-blockquote);
+$color-placeholder: var(--color-placeholder);
+$bg-code: var(--color-bg-code);
+$bg-table-row-even: var(--color-bg-table-even);
+
+.md {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  overflow: auto;
+
+  &-header {
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: $border;
+
+    .icon-button {
+      margin: 0 8px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .fcc-logo {
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &-editor {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: inherit;
+    margin: 0;
+    padding: 20px;
+    outline: none;
+    resize: none;
+    border-right: $border;
+    background-color: inherit;
+    color: inherit;
+
+    &::placeholder {
+      color: $color-placeholder;
+      font-weight: 600;
+    }
+
+    &:placeholder-shown {
+      border-right: none;
+    }
+  }
+
+  &-preview {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    // font-family: 'Comfortaa', cursive;
+    padding: 0 20px 20px;
+
+    &:empty {
+      display: none;
+    }
+
+    * {
+      font-family: inherit;
+    }
+
+    h1 {
+      padding-bottom: 0.5rem;
+      border-bottom: $border;
+    }
+
+    table {
+      border: $border;
+      border-collapse: collapse;
+
+      tr {
+        &:nth-child(2n) {
+          background-color: $bg-table-row-even;
+        }
+      }
+    }
+
+    th,
+    td {
+      border: $border;
+      padding: 6px 14px;
+    }
+
+    blockquote {
+      position: relative;
+      margin: 1rem;
+
+      &::before {
+        content: '';
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        width: 5px;
+        border-radius: 4px;
+        background-color: $color-blockquote;
+      }
+      padding-left: 20px;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 2px solid $color-border;
+      margin: 1.5rem 0;
+    }
+
+    del {
+      text-decoration-color: $color-delete;
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    pre {
+      background-color: $bg-code;
+      padding: 0.875rem 1rem;
+      border-radius: 0.75rem;
+    }
+
+    code {
+      font-size: 0.875rem;
+      border-radius: 6px;
+      padding: 3px 6px;
+      font-family: 'Fira Code', monospace;
+      background-color: $bg-code;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-wrap: wrap;
+
+    &-editor {
+      border-right: none;
+      border-bottom: $border;
+      height: 50%;
+
+      &:placeholder-shown {
+        border-bottom: none;
+      }
+    }
+
+    &-preview {
+      height: 50%;
+    }
+  }
+}
