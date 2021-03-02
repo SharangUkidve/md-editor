@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/md-editor/static/css/main.3680f325.chunk.css",
+    "main.js": "/md-editor/static/js/main.5e2acb18.chunk.js",
+    "main.js.map": "/md-editor/static/js/main.5e2acb18.chunk.js.map",
+    "runtime-main.js": "/md-editor/static/js/runtime-main.2898509a.js",
+    "runtime-main.js.map": "/md-editor/static/js/runtime-main.2898509a.js.map",
+    "static/js/2.5e02cda4.chunk.js": "/md-editor/static/js/2.5e02cda4.chunk.js",
+    "static/js/2.5e02cda4.chunk.js.map": "/md-editor/static/js/2.5e02cda4.chunk.js.map",
+    "index.html": "/md-editor/index.html",
+    "static/css/main.3680f325.chunk.css.map": "/md-editor/static/css/main.3680f325.chunk.css.map",
+    "static/js/2.5e02cda4.chunk.js.LICENSE.txt": "/md-editor/static/js/2.5e02cda4.chunk.js.LICENSE.txt",
+    "static/media/fcc.2bba284f.svg": "/md-editor/static/media/fcc.2bba284f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2898509a.js",
+    "static/js/2.5e02cda4.chunk.js",
+    "static/css/main.3680f325.chunk.css",
+    "static/js/main.5e2acb18.chunk.js"
+  ]
+}
